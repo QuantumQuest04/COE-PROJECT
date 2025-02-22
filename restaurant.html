@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Indian Restaurant</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f1ea; }
+        header { background: url('https://source.unsplash.com/1600x900/?luxury-restaurant') center/cover no-repeat; color: #ffcc00; text-align: center; padding: 60px; font-size: 50px; font-weight: bold; font-family: 'Lobster', cursive; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); }
+        nav { display: flex; justify-content: center; gap: 20px; padding: 15px; background: linear-gradient(to right, #8b0000, #b22222); border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); }
+        nav a { color: white; text-decoration: none; padding: 15px 25px; font-size: 20px; font-weight: bold; border-radius: 8px; transition: background 0.3s, transform 0.2s; cursor: pointer; }
+        nav a:hover { background-color: #ffcc00; color: #8b0000; transform: scale(1.1); }
+        .section { display: none; padding: 30px; text-align: center; }
+        .active { display: block; }
+        .menu { padding: 50px; border-radius: 10px; background-color: #fff3e0; display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
+        .menu h2 { width: 100%; text-align: center; color: #8b0000; }
+        .menu .menu-column { display: flex; flex-direction: column; gap: 15px; }
+        .menu .menu-item { display: flex; align-items: center; gap: 20px; padding: 15px; background: white; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); }
+        .menu .menu-item img { width: 100px; height: 100px; border-radius: 10px; object-fit: cover; }
+        .menu .menu-item span { font-size: 22px; font-weight: bold; color: #5a2e02; }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>Welcome to Royal Indian Cuisine</header>
+    <nav>
+        <a href="#" onclick="showSection('menu')">Menu</a>
+        <a href="#" onclick="showSection('reservation')">Reservation</a>
+        <a href="#" onclick="showSection('location')">Location</a>
+        <a href="#" onclick="showSection('reviews')">Customer Reviews</a>
+    </nav>
+
+
+    <div id="menu" class="section active menu">
+        <h2>Our Tempting Menu</h2>
+        <div class="menu-column">
+            <div class="menu-item"><img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Instant-Pot-Mumbai-Pav-Bhaji-Recipe.jpg" alt="Pav Bhaji"><span>Pav Bhaji - Rs.110</span></div>
+            <div class="menu-item"><img src="https://profusioncurry.com/wp-content/uploads/2022/01/Paneer-tikka-in-air-fryer-served-for-appetizer.jpg" alt="Paneer Tikka"><span>Paneer Tikka - Rs.160</span></div>
+            <div class="menu-item"><img src="https://cookingfromheart.com/wp-content/uploads/2017/09/Veg-Biryani-in-Pressure-Cooker-6.jpg" alt="Biryani"><span>Biryani - Rs.350</span></div>
+            <div class="menu-item"><img src="https://www.secondrecipe.com/wp-content/uploads/2017/08/rajma-chawal-1.jpg" alt="Rajma Chawal"><span>Rajma Chawal - Rs.100</span></div>
+            <div class="menu-item"><img src="https://madscookhouse.com/wp-content/uploads/2022/10/Kadhai-Paneer.jpg" alt="Kadai Paneer"><span>Kadai Paneer - Rs.220</span></div>
+            <div class="menu-item"><img src="https://myfoodstory.com/wp-content/uploads/2022/04/Veg-Kolhapuri-4.jpg" alt="Veg Kohlapuri"><span>Veg Kohlapuri - Rs.230</span></div>
+            <div class="menu-item"><img src="https://cheeseforthought.com/wp-content/uploads/2024/09/desi-pub-matar-paneer-recipe-403x500.png" alt="Matar Paneer"><span>Matar Paneer - Rs.200</span></div>
+        </div>
+        <div class="menu-column">
+            <div class="menu-item"><img src="https://www.cookwithmanali.com/wp-content/uploads/2020/05/Masala-Dosa.jpg" alt="Masala Dosa"><span>Masala Dosa - Rs.90</span></div>
+            <div class="menu-item"><img src="https://shwetainthekitchen.com/wp-content/uploads/2019/11/IMG_6920_1-scaled.jpg" alt="Dal Makhani"><span>Dal Makhani - Rs.140</span></div>
+            <div class="menu-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4TKOs0yNldwdM8uHgBYnKsqf5beS-vhtVNEK7lV2ZEIs0pXlxbHeE3zjvwFWQnl27U6fFsW7K68hmTeS7Dr4JG-KQKx5KlaEngVMSyCfQq2JWA5OY1dk_vpDt0ZZn5FNC7xrOYuUtfIVnDG-zr4E6ljatilAAbgIYNMUQ_sMSZHY0RXreyhHHqZCK/s16000/Chhole%20Bhature.jpg" alt="Chole Bhature"><span>Chole Bhature - Rs.100</span></div>
+            <div class="menu-item"><img src="https://www.awesomecuisine.com/wp-content/uploads/2007/11/Pani-Puri-500x500.jpg" alt="Pani Puri"><span>Pani Puri - Rs.60</span></div>
+            <div class="menu-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVVZy2ivCo4yEcZvYHbLxfJSc8-p8y_yNFLw&s" alt="Veg Korma"><span>Veg Korma - Rs.150</span></div>
+            <div class="menu-item"><img src="https://www.chefadora.com/_next/image?url=https%3A%2F%2Fchefadora.b-cdn.net%2F003f0f0351967a7cb6212a8d9bfaf889_f956154e73.jpg&w=3840&q=75" alt="Gulab Jamun"><span>Gulab Jamun - Rs.70</span></div>
+            <div class="menu-item"><img src="https://palatesdesire.com/wp-content/uploads/2022/09/Rasmalai-recipe@palates-desire.jpg" alt="Rasmalai"><span>Rasmalai - Rs.100</span></div>
+        </div>
+    </div>
+    <div id="reservation" class="section reservation">
+        <h2>Reserve a Table</h2>
+        <p>Enjoy an unforgettable dining experience. Book your table now!</p>
+        <form>
+            <label for="name">Customer Name:</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <br>
+            <br>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" placeholder="Mobile Number" required>
+            <br>
+            <br>
+            
+            <label for="date">Reservation Date:</label>
+            <input type="date" id="date" required>
+            <br>
+            <br>
+            
+            <label for="time">Reservation Time:</label>
+            <input type="time" id="time" required>
+            <br>
+            <br>
+            
+            <button type="submit">Reserve</button>
+        </form>
+    </div>
+
+    <div id="location" class="section">
+        <h2>Find Us</h2>
+        <p>Royal Street, New Delhi, India</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83937480957!2d77.06889914999999!3d28.5272803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03c0aa3f1b59%3A0x653aa58d7b54b3eb!2sNew%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sus!4v1623414353343!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+
+    <div id="reviews" class="section">
+        <h2>Customer Reviews</h2>
+        <p>"The best Indian food I've ever had! The ambiance is amazing, and the service is top-notch!" - Priya M.</p><br>
+        <p>"Good atmosphere and the cutomer service was very good!"" - Jainsi</p><br>
+        <p>"Pretty aesthetic layout and delicious diversity of food..!"" - Kamana</p><br>
+        <p>pehle khana khila, fir review dungi! - Aaysha</p>
+    </div>
+</body>
+</html>
