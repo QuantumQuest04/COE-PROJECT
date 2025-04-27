@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #007BFF; /* Blue */
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    form {
+      text-align: left;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: 600;
+    }
+
+    form input[type="email"],
+    form input[type="password"],
+    form input[type="number"] {
+      width: 100%;
+      padding: 10px 15px;
+      margin-bottom: 15px;
+      border: 2px solid #00C851; /* Green border */
+      border-radius: 8px;
+      background: #ffffff;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    form input[type="email"]:focus,
+    form input[type="password"]:focus,
+    form input[type="number"]:focus {
+      border-color: #007BFF; /* Blue border on focus */
+      outline: none;
+    }
+
+    .error {
+      color: #ff4444; /* Red error */
+      font-size: 12px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #00C851; /* Green button */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #007BFF; /* Blue on hover */
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .show-password {
+      font-size: 13px;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+
+    <form id="myForm">
+      <label>Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <span class="error" id="emailError"></span>
+
+      <label>Password:</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+      <div class="show-password">
+        <input type="checkbox" onclick="togglePassword('password')"> Show Password
+      </div>
+      <span class="error" id="passwordError"></span>
+
+      <label>Confirm Password:</label>
+      <input type="password" id="confirmpassword" placeholder="Re-enter your password" required>
+      <span class="error" id="confirmpassworderror"></span>
+
+      <label>Phone Number:</label>
+      <input type="number" id="number" placeholder="Enter your number" required>
+      <span class="error" id="numbererror"></span>
+
+      <label>Age:</label>
+      <input type="number" id="age" placeholder="Enter your age" required>
+      <span class="error" id="ageerror"></span>
+
+      <label>OTP:</label>
+      <input type="number" id="OTP" placeholder="Enter the OTP sent to your phone number" required>
+      <span class="error" id="OTPerror"></span>
+
+      <button type="submit">Generate OTP</button>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="terms" required> Accept Terms and Conditions*
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword(id) {
+      var x = document.getElementById(id);
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+  </script>
+</body>
+</html>
